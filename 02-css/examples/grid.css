@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid #ccc;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border: 1px solid #ccc;
+}
+
+.main {
+    grid-area: main;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    grid-area: footer;
+    border: 1px solid #ccc;
+}

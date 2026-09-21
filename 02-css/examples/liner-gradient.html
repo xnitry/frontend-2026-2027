@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @property --a {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      @keyframes spin {
+        to {
+          --a: 360deg;
+        }
+      }
+
+      body {
+        background: #111;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: white;
+      }
+
+      .card {
+        width: 500px;
+        height: 500px;
+        display: grid;
+        place-items: center;
+        border: 8px solid transparent;
+        border-radius: 16px;
+        background:
+          linear-gradient(#111, #111) padding-box,
+          conic-gradient(from var(--a), red, yellow, red) border-box;
+        animation: spin 3s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Hello World</h1>
+    </div>
+  </body>
+</html>
